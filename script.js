@@ -33,6 +33,10 @@ form.addEventListener('submit', function(e) {
 
     let passwordString = ""
 
+    if(password.length == 0) {
+        passwordBox.innerHTML = "Please specify which characters to add"
+    }
+
     for (let i = 0; i < passwordLength; i++) {
         const randomChar = password[Math.floor(Math.random()*(password.length - 1))]
         // console.log(randomChar)
