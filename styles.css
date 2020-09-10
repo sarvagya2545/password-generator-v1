@@ -1,0 +1,130 @@
+/* Import font => Kumbh Sans */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.8rem;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+
+    width: 50%;
+    padding: 3rem;
+    border-radius: 40px;
+
+    background-color: aquamarine;
+}
+
+.heading {
+    margin: 1.5rem;
+}
+
+.pass-box {
+    color: #000;
+    background-color: #fff;
+    margin: 2rem 3rem 3rem;
+    height: 4rem;
+
+    font-size: 1.6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    word-break: break-all;
+}
+
+.form {
+    display: grid;
+    text-align: start;
+    margin: 0 auto;
+
+    width: 93%;
+
+    grid-template-areas: 
+    "len slider number"
+    "sym check-1 ."
+    "up check-2 ."
+    "lo check-3 ."
+    "num check-4 ."
+    "button button button"
+    ;
+}
+
+.form * {
+    margin: .5rem;
+}
+
+.btn {
+    font: inherit;
+    padding: 1rem 2rem;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+/* grid arrangements for the form */
+.len {
+    grid-area: number;
+}
+
+.up {
+    grid-area: check-2;
+}
+
+.lo {
+    grid-area: check-3;
+}
+
+.sym {
+    grid-area: check-1;
+}
+
+.num {
+    grid-area: check-4;
+}
+
+button {
+    grid-area: button;
+}
+
+#label-length {
+    grid-area: len;
+}
+
+#label-symbol {
+    grid-area: sym;
+}
+
+#label-up {
+    grid-area: up;
+}
+
+#label-lo {
+    grid-area: lo;
+}
+
+#label-num {
+    grid-area: num;
+}

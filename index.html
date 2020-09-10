@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Password Generator</h1>
+        <h3 class="pass-box" id="pass-box">password here</h3>
+
+        <form class="form" id="form">
+            <label for="passwordLength" id="label-length">Length of the password: </label>
+            <input type="range" name="passwordLengthSlider" id="passwordLengthSlider" class="pwd-len-slider" max="30" min="6" value="10" step="1">
+            <input type="number" name="passwordLength" id="passwordLength" class="len" value="10" max="30" min="6">
+
+            <label for="containSymbol" id="label-symbol">Include Symbols: </label>
+            <input type="checkbox" name="containSymbol" id="containSymbol" class="sym">
+
+            <label for="containUppercase" id="label-up">Include uppercase characters: </label>
+            <input type="checkbox" name="containUppercase" id="containUppercase" class="up">
+
+            <label for="containLowercase" id="label-lo">Include lowercase characters: </label>
+            <input type="checkbox" name="containLowercase" id="containLowercase" class="lo">
+
+            <label for="containNumbers" id="label-num">Include numbers: </label>
+            <input type="checkbox" name="containNumbers" id="containNumbers" class="num">
+
+            <button class="btn">Generate password</button>
+        </form>
+    </div>
+</body>
+</html>
