@@ -34,17 +34,17 @@ form.addEventListener('submit', function(e) {
     let passwordString = ""
 
     if(password.length == 0) {
-        passwordBox.innerHTML = "Please specify which characters to add"
+        passwordBox.innerHTML = "Please check the boxes"
+    } else {
+        for (let i = 0; i < passwordLength; i++) {
+            const randomChar = password[Math.floor(Math.random()*(password.length - 1))]
+            // console.log(randomChar)
+            passwordString += randomChar
+        }
+    
+        // console.log(passwordString);
+        passwordBox.innerHTML = passwordString;
     }
-
-    for (let i = 0; i < passwordLength; i++) {
-        const randomChar = password[Math.floor(Math.random()*(password.length - 1))]
-        // console.log(randomChar)
-        passwordString += randomChar
-    }
-
-    // console.log(passwordString);
-    passwordBox.innerHTML = passwordString;
 })
 
 // function to generate arrays having characters from their ASCII values
